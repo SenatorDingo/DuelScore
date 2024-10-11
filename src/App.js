@@ -6,7 +6,6 @@ function App() {
   const [team2Name, setTeam2Name] = useState('');
   const [team1Score, setTeam1Score] = useState(0);
   const [team2Score, setTeam2Score] = useState(0);
-
   const [lastAction, setLastAction] = useState(null);
 
   const updateScore = (team, change) => {
@@ -15,7 +14,6 @@ function App() {
     } else {
       setTeam2Score(team2Score + change);
     }
-
     setLastAction({ team, change });
   };
 
@@ -31,83 +29,45 @@ function App() {
   };
 
   return (
-    <div className="container-fluid bg-light p-4">
-      <div className="text-center mb-4">
-        <h1>DuelScore</h1>
+    <div className="container-fluid bg-custom">
+      <div className="text-center title-box">
+        <h1 className="title">DuelScore</h1>
       </div>
 
-      <div className="row mb-4">
-        <div className="col-md-2 d-flex justify-content-center">
-          <button className="btn btn-outline-secondary" onClick={undo}>Undo</button>
-        </div>
-        <div className="col-md-8">
-          <div className="row mb-2">
-            <div className="col-md-6">
-              <input
-                type="text"
-                className="form-control"
-                placeholder="Team Name"
-                value={team1Name}
-                onChange={(e) => setTeam1Name(e.target.value)}
-              />
-            </div>
-            <div className="col-md-6">
-              <input
-                type="text"
-                className="form-control"
-                value={team1Score}
-                readOnly
-              />
-            </div>
-          </div>
-          <div className="row text-center">
-            <div className="col">
-              <button className="btn btn-danger btn-lg" onClick={() => updateScore(1, -5)}>-5 pts</button>
-            </div>
-            <div className="col">
-              <button className="btn btn-success btn-lg" onClick={() => updateScore(1, 10)}>+10 pts</button>
-            </div>
-            <div className="col">
-              <button className="btn btn-warning btn-lg" onClick={() => updateScore(1, 15)}>+15 pts</button>
-            </div>
+      <div className="row justify-content-center">
+        <div className="col-md-4 text-center">
+          <div className="team-box">
+            <input
+              type="text"
+              className="form-control team-name"
+              placeholder="Team 1 Name"
+              value={team1Name}
+              onChange={(e) => setTeam1Name(e.target.value)}
+            />
+            <div className="score-box">{team1Score}</div>
+            <button className="btn score-btn btn-outline-danger" onClick={() => updateScore(1, 15)}>+15</button>
+            <button className="btn score-btn btn-outline-success" onClick={() => updateScore(1, 10)}>+10</button>
+            <button className="btn score-btn btn-outline-warning" onClick={() => updateScore(1, -5)}>-5</button>
           </div>
         </div>
-      </div>
 
-      <div className="row mb-4">
-        <div className="col-md-2 d-flex justify-content-center">
-          <button className="btn btn-outline-secondary" onClick={undo}>Undo</button>
+        <div className="col-md-2 text-center">
+          <button className="btn btn-undo" onClick={undo}>Undo</button>
         </div>
-        <div className="col-md-8">
-          <div className="row mb-2">
-            <div className="col-md-6">
-              <input
-                type="text"
-                className="form-control"
-                placeholder="Team Name"
-                value={team2Name}
-                onChange={(e) => setTeam2Name(e.target.value)}
-              />
-            </div>
-            <div className="col-md-6">
-              <input
-                type="text"
-                className="form-control"
-                value={team2Score}
-                readOnly
-              />
-            </div>
-          </div>
-          <div className="row text-center">
-            <div className="col">
-              <button className="btn btn-danger btn-lg" onClick={() => updateScore(2, -5)}>-5 pts</button>
-            </div>
-            <div className="col">
-              <button className="btn btn-success btn-lg" onClick={() => updateScore(2, 10)}>+10 pts</button>
-            </div>
-            <div className="col">
-              <button className="btn btn-warning btn-lg" onClick={() => updateScore(2, 15)}>+15 pts</button>
-            </div>
+
+        <div className="col-md-4 text-center">
+          <div className="team-box">
+            <input
+              type="text"
+              className="form-control team-name"
+              placeholder="Team 2 Name"
+              value={team2Name}
+              onChange={(e) => setTeam2Name(e.target.value)}
+            />
+            <div className="score-box">{team2Score}</div>
+            <button className="btn score-btn btn-outline-danger" onClick={() => updateScore(2, 15)}>+15</button>
+            <button className="btn score-btn btn-outline-success" onClick={() => updateScore(2, 10)}>+10</button>
+            <button className="btn score-btn btn-outline-warning" onClick={() => updateScore(2, -5)}>-5</button>
           </div>
         </div>
       </div>
