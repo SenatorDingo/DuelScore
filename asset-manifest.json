@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/DuelScore/static/css/main.6562cf05.css",
+    "main.js": "/DuelScore/static/js/main.89a80328.js",
+    "index.html": "/DuelScore/index.html",
+    "main.6562cf05.css.map": "/DuelScore/static/css/main.6562cf05.css.map",
+    "main.89a80328.js.map": "/DuelScore/static/js/main.89a80328.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6562cf05.css",
+    "static/js/main.89a80328.js"
+  ]
+}
