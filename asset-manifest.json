@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/DuelScore/static/css/main.5c5ae5e1.css",
-    "main.js": "/DuelScore/static/js/main.9ef3530d.js",
+    "main.js": "/DuelScore/static/js/main.be1a9f3a.js",
     "index.html": "/DuelScore/index.html",
     "main.5c5ae5e1.css.map": "/DuelScore/static/css/main.5c5ae5e1.css.map",
-    "main.9ef3530d.js.map": "/DuelScore/static/js/main.9ef3530d.js.map"
+    "main.be1a9f3a.js.map": "/DuelScore/static/js/main.be1a9f3a.js.map"
   },
   "entrypoints": [
     "static/css/main.5c5ae5e1.css",
-    "static/js/main.9ef3530d.js"
+    "static/js/main.be1a9f3a.js"
   ]
 }
